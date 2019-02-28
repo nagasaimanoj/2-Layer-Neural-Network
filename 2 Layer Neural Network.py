@@ -53,7 +53,7 @@ class NeuralNetwork():
         return output_from_layer1, output_from_layer2
 
     def print_weights(self):
-        print("Layer 1 (4 neurons, each with 3 inputs): ")
+        print("Layer 1 (4 neurons, each with 3 inputs):")
         print(self.layer1.synaptic_weights)
 
         print("Layer 2 (1 neuron, with 4 inputs):")
@@ -63,14 +63,12 @@ class NeuralNetwork():
 if __name__ == "__main__":
     seed(1)
 
-    layer1 = NeuronLayer(number_of_neurons=4,
-                         number_of_inputs_per_neuron=3)
-    layer2 = NeuronLayer(number_of_neurons=1,
-                         number_of_inputs_per_neuron=4)
+    layer1 = NeuronLayer(number_of_neurons=4, number_of_inputs_per_neuron=3)
+    layer2 = NeuronLayer(number_of_neurons=1, number_of_inputs_per_neuron=4)
 
     neural_network = NeuralNetwork(layer1=layer1, layer2=layer2)
 
-    print("Stage 1) Random starting synaptic weights: ")
+    print("Stage 1) Random starting synaptic weights:")
     neural_network.print_weights()
 
     training_set_inputs = array([[0, 0, 1],
@@ -80,6 +78,7 @@ if __name__ == "__main__":
                                  [1, 0, 0],
                                  [1, 1, 1],
                                  [0, 0, 0]])
+
     training_set_outputs = array([[0],
                                   [1],
                                   [1],
